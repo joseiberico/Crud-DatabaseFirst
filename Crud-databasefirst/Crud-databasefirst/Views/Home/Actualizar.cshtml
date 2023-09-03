@@ -1,0 +1,27 @@
+﻿@model Contacto
+@{
+    ViewData["Title"] = "Actualizar";
+}
+
+<h2>Actualizar Contacto</h2>
+
+<form asp-controller="Home" asp-action="Actualizar" method="post">
+    <div class="form-group">
+        <label for="IdContacto">IdContacto:</label>
+        <input type="text" id="IdContacto" name="IdContacto" value="@Model.IdContacto" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" value="@Model.Nombre" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Telefono">Teléfono:</label>
+        <input type="text" id="Telefono" name="Telefono" value="@Model.Telefono" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="Correo">Correo:</label>
+        <input type="email" id="Correo" name="Correo" value="@Model.Correo" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+<a class="btn btn-danger" asp-controller="Home" asp-action="Index">Regresar</a>
